@@ -54,6 +54,7 @@ public class PaxelItem extends MiningToolItem {
         return state.isIn(BlockTags.PICKAXE_MINEABLE)
                 || state.isIn(BlockTags.AXE_MINEABLE)
                 || state.isIn(BlockTags.SHOVEL_MINEABLE)
+                || state.isIn(BlockTags.HOE_MINEABLE)
                 || super.isSuitableFor(state);
     }
 
@@ -61,7 +62,8 @@ public class PaxelItem extends MiningToolItem {
     public float getMiningSpeedMultiplier(ItemStack stack, BlockState state) {
         if (state.isIn(BlockTags.PICKAXE_MINEABLE)
                 || state.isIn(BlockTags.AXE_MINEABLE)
-                || state.isIn(BlockTags.SHOVEL_MINEABLE)) {
+                || state.isIn(BlockTags.SHOVEL_MINEABLE)
+                || state.isIn(BlockTags.HOE_MINEABLE)) {
             return this.getMaterial().getMiningSpeedMultiplier();
         }
         return super.getMiningSpeedMultiplier(stack, state);
