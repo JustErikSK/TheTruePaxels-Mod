@@ -9,7 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class TheTruePaxels implements ModInitializer {
-	public static final String MOD_ID = "the-true-paxels";
+	public static final String MOD_ID = "thetruepaxels";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	@Override
