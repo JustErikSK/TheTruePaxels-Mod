@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "the-true-paxels",
+	"id": "thetruepaxels",
 	"version": "${version}",
 	"name": "The True Paxels",
 	"description": "Mine everything with one tool! Paxels are universal tools that work like pickaxes, axes and shovels - all at the same time!",
@@ -23,7 +23,7 @@
 		]
 	},
 	"mixins": [
-		"the-true-paxels.mixins.json"
+		"thetruepaxels.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.17.3",
