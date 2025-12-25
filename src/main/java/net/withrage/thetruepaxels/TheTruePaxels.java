@@ -2,6 +2,7 @@ package net.withrage.thetruepaxels;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.withrage.thetruepaxels.config.TheTruePaxelsConfig;
 import net.withrage.thetruepaxels.item.custom.ModItemGroups;
 import net.withrage.thetruepaxels.item.custom.ModItems;
 import net.withrage.thetruepaxels.item.custom.ModToolMaterial;
@@ -14,7 +15,7 @@ public class TheTruePaxels implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+		TheTruePaxelsConfig.load();
 		ModItems.registerModItems();
 		ModItemGroups.registerItemGroups();
 	}
