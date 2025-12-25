@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "thetruepaxels/stone_paxel"
+    "layer0": "thetruepaxels:item/stone_paxel"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "thetruepaxels/golden_paxel"
+    "layer0": "thetruepaxels:item/golden_paxel"
   }
 }
