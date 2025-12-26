@@ -15,7 +15,7 @@
 		"sources": "https://github.com/JustErikSK/TheTruePaxels-Mod"
 	},
 	"license": "MIT",
-	"icon": "assets/simpleexcavators/thetruepaxels-icon.png",
+	"icon": "assets/thetruepaxels/thetruepaxels-icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
