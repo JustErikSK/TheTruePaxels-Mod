@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "BCD",
+    " A ",
+    " A "
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:stick"
+    },
+    "B": {
+      "item": "minecraft:stone_axe"
+    },
+    "C": {
+      "item": "minecraft:stone_shovel"
+    },
+    "D": {
+      "item": "minecraft:stone_pickaxe"
+    }
+  },
+  "result": {
+    "id": "thetruepaxels:stone_paxel",
+    "count": 1
+  }
+}
