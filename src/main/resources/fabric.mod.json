@@ -3,23 +3,23 @@
 	"id": "thetruepaxels",
 	"version": "${version}",
 	"name": "The True Paxels",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Mine everything with one tool! Paxels are universal tools that work like pickaxes, axes and shovels - all at the same time!",
 	"authors": [
-		"Me!"
+		"JustErikSK",
+		"Satorisek",
+		"With Rage Studios"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/mod/thetruepaxels",
+		"issues": "https://github.com/JustErikSK/TheTruePaxels-Mod/issues",
+		"sources": "https://github.com/JustErikSK/TheTruePaxels-Mod"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/thetruepaxels/icon.png",
+	"license": "MIT",
+	"icon": "assets/thetruepaxels/thetruepaxels-icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
 			"net.withrage.thetruepaxels.TheTruePaxels"
-		],
-		"fabric-datagen": [
-			"net.withrage.thetruepaxels.TheTruePaxelsDataGenerator"
 		]
 	},
 	"mixins": [
