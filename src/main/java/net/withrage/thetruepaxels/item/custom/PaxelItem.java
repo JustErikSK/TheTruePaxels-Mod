@@ -3,13 +3,12 @@ package net.withrage.thetruepaxels.item.custom;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.MiningToolItem;
-import net.minecraft.item.ToolMaterial;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.*;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 
@@ -67,5 +66,46 @@ public class PaxelItem extends MiningToolItem {
             return this.getMaterial().getMiningSpeedMultiplier();
         }
         return super.getMiningSpeedMultiplier(stack, state);
+    }
+
+    @Override
+    public ActionResult useOnBlock(ItemUsageContext context) {
+        PlayerEntity player = context.getPlayer();
+        ItemStack paxelStack = context.getStack();
+
+        boolean sneaking = player != null && player.isSneaking();
+
+        if (sneaking) {
+            ActionResult hoeResult = tryDelegateUseOnBlock(context, Items.DIAMOND_HOE);
+            if (hoeResult.isAccepted()) {
+                damagePaxelIfServer(context, player, paxelStack);
+                return hoeResult;
+            }
+        }
+
+        if (!sneaking) {
+            ActionResult axeResult = tryDelegateUseOnBlock(context, Items.DIAMOND_AXE);
+            if (axeResult.isAccepted()) {
+                damagePaxelIfServer(context, player, paxelStack);
+                return axeResult;
+            }
+            ActionResult shovelResult = tryDelegateUseOnBlock(context, Items.DIAMOND_SHOVEL);
+            if (shovelResult.isAccepted()) {
+                damagePaxelIfServer(context, player, paxelStack);
+                return shovelResult;
+            }
+        }
+        return super.useOnBlock(context);
+    }
+
+    private static ActionResult tryDelegateUseOnBlock(ItemUsageContext context, Item delegateItem) {
+        ItemStack fakeTool = new ItemStack(delegateItem);
+        return fakeTool.useOnBlock(context);
+    }
+
+    private static void damagePaxelIfServer(ItemUsageContext context, PlayerEntity player, ItemStack paxelStack) {
+        if (player == null) return;
+        if (context.getWorld().isClient()) return;
+        paxelStack.damage(1, player, p -> p.sendToolBreakStatus(context.getHand()));
     }
 }
