@@ -44,7 +44,7 @@ public class PaxelItem extends MiningToolItem {
     public PaxelItem(ToolMaterial material, int attackDamage, float attackSpeed, int durability, Settings settings) {
         super(
                 material,
-                ModBlockTags.PAXEL_MINEABLE, // or any tag you want
+                ModBlockTags.PAXEL_MINEABLE,
                 settings.attributeModifiers(
                         MiningToolItem.createAttributeModifiers(material, attackDamage, attackSpeed)
                 ).maxDamage(durability)
