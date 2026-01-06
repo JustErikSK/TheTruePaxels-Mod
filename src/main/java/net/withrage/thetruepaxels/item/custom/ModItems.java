@@ -21,9 +21,9 @@ public class ModItems {
     public static final Item WOODEN_PAXEL  = registerPaxel("wooden_paxel",  ToolMaterials.WOOD, 1, -2.8f, TheTruePaxelsConfig.woodenDurability, false);
     public static final Item STONE_PAXEL  = registerPaxel("stone_paxel",  ToolMaterials.STONE, 1, -2.8f, TheTruePaxelsConfig.stoneDurability, false);
     public static final Item GOLDEN_PAXEL = registerPaxel("golden_paxel", ToolMaterials.GOLD, 1, -2.8f, TheTruePaxelsConfig.goldenDurability, false);
-    public static final Item IRON_PAXEL   = registerPaxel("iron_paxel",   ToolMaterials.IRON, 2, -2.7f, TheTruePaxelsConfig.ironDurability, false);
-    public static final Item DIAMOND_PAXEL= registerPaxel("diamond_paxel",ToolMaterials.DIAMOND, 3, -2.7f, TheTruePaxelsConfig.diamondDurability, false);
-    public static final Item NETHERITE_PAXEL=registerPaxel("netherite_paxel",ToolMaterials.NETHERITE, 4, -2.7f, TheTruePaxelsConfig.netheriteDurability, true);
+    public static final Item IRON_PAXEL   = registerPaxel("iron_paxel",   ToolMaterials.IRON, 1, -2.7f, TheTruePaxelsConfig.ironDurability, false);
+    public static final Item DIAMOND_PAXEL= registerPaxel("diamond_paxel",ToolMaterials.DIAMOND, 1, -2.7f, TheTruePaxelsConfig.diamondDurability, false);
+    public static final Item NETHERITE_PAXEL=registerPaxel("netherite_paxel",ToolMaterials.NETHERITE, 1, -2.7f, TheTruePaxelsConfig.netheriteDurability, true);
 
     private static Item registerPaxel(String name,
                                       ToolMaterial material,
