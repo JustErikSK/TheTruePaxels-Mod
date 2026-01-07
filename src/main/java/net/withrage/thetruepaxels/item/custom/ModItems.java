@@ -9,7 +9,6 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryEntryLookup;
 import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.Identifier;
 import net.withrage.thetruepaxels.TheTruePaxels;
 import net.withrage.thetruepaxels.config.TheTruePaxelsConfig;
