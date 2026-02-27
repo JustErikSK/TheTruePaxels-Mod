@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_diamond": {
+    "has_copper_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:diamond"
+              "minecraft:copper_ingot"
             ]
           }
         ]
@@ -16,12 +16,15 @@
   },
   "requirements": [
     [
-      "has_diamond"
+      "has_copper_ingot"
     ]
   ],
   "rewards": {
     "recipes": [
-      "thetruepaxels:diamond_paxel"
+      "thetruepaxels:copper_paxel",
+      "thetruepaxels:copper_pickaxe",
+      "thetruepaxels:copper_shovel",
+      "thetruepaxels:copper_axe"
     ]
   },
   "sends_telemetry_event": false
