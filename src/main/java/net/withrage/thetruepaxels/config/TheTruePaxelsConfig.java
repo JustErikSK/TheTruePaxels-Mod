@@ -10,8 +10,13 @@ import java.nio.file.Path;
 public class TheTruePaxelsConfig {
     private static final Path PATH = FabricLoader.getInstance().getConfigDir().resolve("thetruepaxels.toml");
 
+    public static boolean woodStripping = true;
+    public static boolean pathMaking = true;
+    public static boolean farmlandMaking = true;
+
     public static int woodenDurability = 108;
     public static int stoneDurability = 262;
+    public static int copperDurability = 380;
     public static int goldenDurability = 64;
     public static int ironDurability = 506;
     public static int diamondDurability = 3122;
@@ -31,6 +36,10 @@ public class TheTruePaxelsConfig {
                 return;
             }
 
+            woodStripping = getBoolean(toml, "general.woodStripping", woodStripping);
+            pathMaking = getBoolean(toml, "general.pathMaking", pathMaking);
+            farmlandMaking = getBoolean(toml, "general.farmlandMaking", farmlandMaking);
+
             woodenDurability = getInt(toml, "durability.wooden", woodenDurability);
             stoneDurability = getInt(toml, "durability.stone", stoneDurability);
             goldenDurability = getInt(toml, "durability.golden", goldenDurability);
@@ -41,6 +50,11 @@ public class TheTruePaxelsConfig {
         } catch (Exception e) {
             try { writeDefaultFile(); } catch (Exception ignored) {}
         }
+    }
+
+    private static boolean getBoolean(TomlParseResult toml, String key, boolean def) {
+        Boolean v = toml.getBoolean(key);
+        return v != null ? v : def;
     }
 
     private static int getInt(TomlParseResult toml, String key, int def) {
@@ -58,10 +72,18 @@ public class TheTruePaxelsConfig {
                 + "# ================================\n"
                 + "# The True Paxels Configuration\n"
                 + "# ================================\n\n"
+                + "[general]\n"
+                + "# If true, paxels can strip wooden logs.\n"
+                + "woodStripping = " + woodStripping + "\n"
+                + "# If true, paxels can make dirt paths.\n"
+                + "pathMaking = " + pathMaking + "\n"
+                + "# If true, paxels can make farmland.\n"
+                + "farmlandMaking = " + farmlandMaking + "\n\n"
                 + "[durability]\n"
                 + "# You can change the durability for each Paxel here.\n"
                 + "wooden = " + woodenDurability + "\n"
                 + "stone = " + stoneDurability + "\n"
+                + "copper = " + copperDurability + "\n"
                 + "golden = " + goldenDurability + "\n"
                 + "iron = " + ironDurability + "\n"
                 + "diamond = " + diamondDurability + "\n"
