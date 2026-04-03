@@ -11,6 +11,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
+import net.withrage.thetruepaxels.config.TheTruePaxelsConfig;
 
 public class PaxelItem extends MiningToolItem {
     public static final TagKey<Block> PAXEL_MINEABLE = TagKey.of(
@@ -21,21 +22,12 @@ public class PaxelItem extends MiningToolItem {
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         super.inventoryTick(stack, world, entity, slot, selected);
-
         if (world.isClient()) return;
-
         int max = stack.getMaxDamage();
         if (max <= 0) return;
-
         int dmg = stack.getDamage();
-
-        if (dmg < 0) {
-            stack.setDamage(0);
-            return;
-        }
-        if (dmg >= max) {
-            stack.setDamage(max - 1);
-        }
+        if (dmg < 0) {stack.setDamage(0);return;}
+        if (dmg >= max) {stack.setDamage(max - 1);}
     }
 
     public PaxelItem(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
@@ -46,27 +38,30 @@ public class PaxelItem extends MiningToolItem {
     public ActionResult useOnBlock(ItemUsageContext context) {
         PlayerEntity player = context.getPlayer();
         ItemStack paxelStack = context.getStack();
-
         boolean sneaking = player != null && player.isSneaking();
-
         if (sneaking) {
-            ActionResult hoeResult = tryDelegateUseOnBlock(context, Items.DIAMOND_HOE);
-            if (hoeResult.isAccepted()) {
-                damagePaxelIfServer(context, player, paxelStack);
-                return hoeResult;
+            if (TheTruePaxelsConfig.farmlandMaking) {
+                ActionResult hoeResult = tryDelegateUseOnBlock(context, Items.DIAMOND_HOE);
+                if (hoeResult.isAccepted()) {
+                    damagePaxelIfServer(context, player, paxelStack);
+                    return hoeResult;
+                }
             }
         }
-
         if (!sneaking) {
-            ActionResult axeResult = tryDelegateUseOnBlock(context, Items.DIAMOND_AXE);
-            if (axeResult.isAccepted()) {
-                damagePaxelIfServer(context, player, paxelStack);
-                return axeResult;
+            if (TheTruePaxelsConfig.woodStripping) {
+                ActionResult axeResult = tryDelegateUseOnBlock(context, Items.DIAMOND_AXE);
+                if (TheTruePaxelsConfig.woodStripping && axeResult.isAccepted()) {
+                    damagePaxelIfServer(context, player, paxelStack);
+                    return axeResult;
+                }
             }
-            ActionResult shovelResult = tryDelegateUseOnBlock(context, Items.DIAMOND_SHOVEL);
-            if (shovelResult.isAccepted()) {
-                damagePaxelIfServer(context, player, paxelStack);
-                return shovelResult;
+            if (TheTruePaxelsConfig.pathMaking) {
+                ActionResult shovelResult = tryDelegateUseOnBlock(context, Items.DIAMOND_SHOVEL);
+                if (TheTruePaxelsConfig.pathMaking && shovelResult.isAccepted()) {
+                    damagePaxelIfServer(context, player, paxelStack);
+                    return shovelResult;
+                }
             }
         }
         return super.useOnBlock(context);

@@ -16,10 +16,14 @@ public class ModItemGroups {
                     .icon(() -> new ItemStack(ModItems.DIAMOND_PAXEL)).entries((displayContext, entries) -> {
                         entries.add(ModItems.WOODEN_PAXEL);
                         entries.add(ModItems.STONE_PAXEL);
+                        entries.add(ModItems.COPPER_PAXEL);
                         entries.add(ModItems.GOLDEN_PAXEL);
                         entries.add(ModItems.IRON_PAXEL);
                         entries.add(ModItems.DIAMOND_PAXEL);
                         entries.add(ModItems.NETHERITE_PAXEL);
+                        entries.add(ModItems.COPPER_PICKAXE);
+                        entries.add(ModItems.COPPER_SHOVEL);
+                        entries.add(ModItems.COPPER_AXE);
                     }).build());
 
     public static void registerItemGroups() {
