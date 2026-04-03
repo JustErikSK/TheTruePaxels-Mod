@@ -25,6 +25,16 @@ public class ModToolMaterial {
                     ModItemTags.STONE_TOOL_MATERIALS
             );
 
+    public static final ToolMaterial COPPER =
+            new ToolMaterial(
+                    BlockTags.INCORRECT_FOR_GOLD_TOOL,
+                    TheTruePaxelsConfig.stoneDurability,
+                    6.0f,
+                    1.0f,
+                    10,
+                    ModItemTags.COPPER_TOOL_MATERIALS
+            );
+
     public static final ToolMaterial GOLD =
             new ToolMaterial(
                     BlockTags.INCORRECT_FOR_GOLD_TOOL,

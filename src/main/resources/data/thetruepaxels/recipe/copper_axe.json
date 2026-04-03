@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " BB",
+    " AB",
+    " A "
+  ],
+  "key": {
+    "A": "minecraft:stick",
+    "B": "minecraft:copper_ingot"
+  },
+  "result": {
+    "id": "thetruepaxels:copper_axe",
+    "count": 1
+  }
+}
