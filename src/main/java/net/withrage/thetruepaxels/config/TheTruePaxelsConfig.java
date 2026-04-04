@@ -42,6 +42,7 @@ public class TheTruePaxelsConfig {
 
             woodenDurability = getInt(toml, "durability.wooden", woodenDurability);
             stoneDurability = getInt(toml, "durability.stone", stoneDurability);
+            copperDurability = getInt(toml, "durability.copper", copperDurability);
             goldenDurability = getInt(toml, "durability.golden", goldenDurability);
             ironDurability = getInt(toml, "durability.iron", ironDurability);
             diamondDurability = getInt(toml, "durability.diamond", diamondDurability);
