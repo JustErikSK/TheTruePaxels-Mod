@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "thetruepaxels:wooden_paxel",
+    "thetruepaxels:stone_paxel",
+    "thetruepaxels:golden_paxel",
+    "thetruepaxels:iron_paxel",
+    "thetruepaxels:diamond_paxel",
+    "thetruepaxels:netherite_paxel",
+    "thetruepaxels:copper_paxel",
+    "thetruepaxels:copper_shovel",
+    "thetruepaxels:copper_pickaxe",
+    "thetruepaxels:copper_axe"
+  ]
+}
