@@ -1,0 +1,21 @@
+modLoader="javafml"
+loaderVersion="[61,)"
+license="MIT"
+[[mods]]
+modId="thetruepaxels"
+version="1.1.1"
+displayName="The True Paxels"
+authors="JustErikSK, Satorisek, With Rage Studios"
+description='''Mine everything with one tool! Paxels are universal tools that work like pickaxes, axes and shovels - all at the same time!'''
+[[dependencies.thetruepaxels]]
+    modId="forge"
+    mandatory=true
+    versionRange="[61,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.thetruepaxels]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.21.11,1.22,)"
+    ordering="NONE"
+    side="BOTH"
