@@ -1,0 +1,31 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_copper_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:copper_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_copper_ingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "thetruepaxels:copper_paxel",
+      "thetruepaxels:copper_pickaxe",
+      "thetruepaxels:copper_shovel",
+      "thetruepaxels:copper_axe"
+    ]
+  },
+  "sends_telemetry_event": false
+}
