@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "thetruepaxels:item/copper_paxel_gui"
+  }
+}
