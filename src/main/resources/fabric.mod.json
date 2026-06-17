@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "thetruepaxels",
+	"version": "${version}",
+	"name": "The True Paxels",
+	"description": "Mine everything with one tool! Paxels are universal tools that work like pickaxes, axes, shovels and hoes - all at the same time!",
+	"authors": [
+		"JustErikSK",
+		"Satorisek",
+		"With Rage Studios"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/thetruepaxels",
+		"issues": "https://github.com/JustErikSK/TheTruePaxels-Mod/issues",
+		"sources": "https://github.com/JustErikSK/TheTruePaxels-Mod"
+	},
+	"license": "MIT",
+	"icon": "assets/thetruepaxels/thetruepaxels-icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.withrage.thetruepaxels.TheTruePaxels"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
