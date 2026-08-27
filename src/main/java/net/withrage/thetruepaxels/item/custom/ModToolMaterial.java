@@ -12,7 +12,7 @@ import net.withrage.thetruepaxels.config.TheTruePaxelsConfig;
 public class ModToolMaterial {
     public static final Tier WOOD = new Tier() {
         @Override public int getUses() { return TheTruePaxelsConfig.woodenDurability; }
-        @Override public float getSpeed() { return 6.0F; }
+        @Override public float getSpeed() { return 2.0F; }
         @Override public float getAttackDamageBonus() { return 1.0F; }
         @Override public int getEnchantmentValue() { return 8; }
         @Override public Ingredient getRepairIngredient() { return Ingredient.of(ItemTags.PLANKS); }
@@ -21,7 +21,7 @@ public class ModToolMaterial {
 
     public static final Tier STONE = new Tier() {
         @Override public int getUses() { return TheTruePaxelsConfig.stoneDurability; }
-        @Override public float getSpeed() { return 6.0F; }
+        @Override public float getSpeed() { return 4.0F; }
         @Override public float getAttackDamageBonus() { return 1.0F; }
         @Override public int getEnchantmentValue() { return 9; }
         @Override public Ingredient getRepairIngredient() { return Ingredient.of(ItemTags.STONE_TOOL_MATERIALS); }
@@ -30,7 +30,7 @@ public class ModToolMaterial {
 
     public static final Tier COPPER = new Tier() {
         @Override public int getUses() { return TheTruePaxelsConfig.copperDurability; }
-        @Override public float getSpeed() { return 6.0F; }
+        @Override public float getSpeed() { return 5.0F; }
         @Override public float getAttackDamageBonus() { return 1.0F; }
         @Override public int getEnchantmentValue() { return 10; }
         @Override public Ingredient getRepairIngredient() { return Ingredient.of(Items.COPPER_INGOT); }
@@ -39,7 +39,7 @@ public class ModToolMaterial {
 
     public static final Tier GOLD = new Tier() {
         @Override public int getUses() { return TheTruePaxelsConfig.goldenDurability; }
-        @Override public float getSpeed() { return 6.0F; }
+        @Override public float getSpeed() { return 12.0F; }
         @Override public float getAttackDamageBonus() { return 1.0F; }
         @Override public int getEnchantmentValue() { return 11; }
         @Override public Ingredient getRepairIngredient() { return Ingredient.of(Items.GOLD_INGOT); }
@@ -57,7 +57,7 @@ public class ModToolMaterial {
 
     public static final Tier DIAMOND = new Tier() {
         @Override public int getUses() { return TheTruePaxelsConfig.diamondDurability; }
-        @Override public float getSpeed() { return 7.0F; }
+        @Override public float getSpeed() { return 8.0F; }
         @Override public float getAttackDamageBonus() { return 3.0F; }
         @Override public int getEnchantmentValue() { return 16; }
         @Override public Ingredient getRepairIngredient() { return Ingredient.of(Items.DIAMOND); }
@@ -66,7 +66,7 @@ public class ModToolMaterial {
 
     public static final Tier NETHERITE = new Tier() {
         @Override public int getUses() { return TheTruePaxelsConfig.netheriteDurability; }
-        @Override public float getSpeed() { return 8.0F; }
+        @Override public float getSpeed() { return 9.0F; }
         @Override public float getAttackDamageBonus() { return 4.0F; }
         @Override public int getEnchantmentValue() { return 16; }
         @Override public Ingredient getRepairIngredient() { return Ingredient.of(Items.NETHERITE_INGOT); }
