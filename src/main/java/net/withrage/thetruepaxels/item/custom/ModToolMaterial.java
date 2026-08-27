@@ -34,7 +34,7 @@ public class ModToolMaterial {
             new ToolMaterial(
                     BlockTags.INCORRECT_FOR_COPPER_TOOL,
                     TheTruePaxelsConfig.copperDurability,
-                    4.0f,
+                    5.0f,
                     1.0f,
                     8,
                     ModItemTags.COPPER_TOOL_MATERIALS
@@ -44,7 +44,7 @@ public class ModToolMaterial {
             new ToolMaterial(
                     BlockTags.INCORRECT_FOR_GOLD_TOOL,
                     TheTruePaxelsConfig.goldenDurability,
-                    6.0f,
+                    12.0f,
                     0.0f,
                     22,
                     ModItemTags.GOLDEN_TOOL_MATERIALS
