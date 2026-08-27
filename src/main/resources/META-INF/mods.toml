@@ -3,7 +3,7 @@ loaderVersion="[65,)"
 license="MIT"
 [[mods]]
 modId="thetruepaxels"
-version="1.1.1"
+version="1.1.2"
 displayName="The True Paxels"
 authors="JustErikSK, Satorisek, With Rage Studios"
 description='''Mine everything with one tool! Paxels are universal tools that work like pickaxes, axes and shovels - all at the same time!'''
