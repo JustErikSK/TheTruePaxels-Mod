@@ -13,7 +13,7 @@ import net.withrage.thetruepaxels.config.TheTruePaxelsConfig;
 public class ModToolMaterial {
     public static final ToolMaterial WOOD = new ToolMaterial() {
         @Override public int getDurability() { return TheTruePaxelsConfig.woodenDurability; }
-        @Override public float getMiningSpeedMultiplier() { return 6.0F; }
+        @Override public float getMiningSpeedMultiplier() { return 2.0F; }
         @Override public float getAttackDamage() { return 1.0F; }
         @Override public int getEnchantability() { return 8; }
         @Override public Ingredient getRepairIngredient() { return Ingredient.fromTag(ItemTags.PLANKS); }
@@ -22,7 +22,7 @@ public class ModToolMaterial {
 
     public static final ToolMaterial STONE = new ToolMaterial() {
         @Override public int getDurability() { return TheTruePaxelsConfig.stoneDurability; }
-        @Override public float getMiningSpeedMultiplier() { return 6.0F; }
+        @Override public float getMiningSpeedMultiplier() { return 4.0F; }
         @Override public float getAttackDamage() { return 1.0F; }
         @Override public int getEnchantability() { return 9; }
         @Override public Ingredient getRepairIngredient() { return Ingredient.fromTag(ItemTags.STONE_TOOL_MATERIALS); }
@@ -31,7 +31,7 @@ public class ModToolMaterial {
 
     public static final ToolMaterial COPPER = new ToolMaterial() {
         @Override public int getDurability() { return TheTruePaxelsConfig.copperDurability; }
-        @Override public float getMiningSpeedMultiplier() { return 6.0F; }
+        @Override public float getMiningSpeedMultiplier() { return 5.0F; }
         @Override public float getAttackDamage() { return 1.0F; }
         @Override public int getEnchantability() { return 10; }
         @Override public Ingredient getRepairIngredient() { return Ingredient.ofItems(Items.COPPER_INGOT); }
@@ -40,7 +40,7 @@ public class ModToolMaterial {
 
     public static final ToolMaterial GOLD = new ToolMaterial() {
         @Override public int getDurability() { return TheTruePaxelsConfig.goldenDurability; }
-        @Override public float getMiningSpeedMultiplier() { return 6.0F; }
+        @Override public float getMiningSpeedMultiplier() { return 12.0F; }
         @Override public float getAttackDamage() { return 1.0F; }
         @Override public int getEnchantability() { return 11; }
         @Override public Ingredient getRepairIngredient() { return Ingredient.ofItems(Items.GOLD_INGOT); }
@@ -58,7 +58,7 @@ public class ModToolMaterial {
 
     public static final ToolMaterial DIAMOND = new ToolMaterial() {
         @Override public int getDurability() { return TheTruePaxelsConfig.diamondDurability; }
-        @Override public float getMiningSpeedMultiplier() { return 7.0F; }
+        @Override public float getMiningSpeedMultiplier() { return 8.0F; }
         @Override public float getAttackDamage() { return 3.0F; }
         @Override public int getEnchantability() { return 16; }
         @Override public Ingredient getRepairIngredient() { return Ingredient.ofItems(Items.DIAMOND); }
@@ -67,7 +67,7 @@ public class ModToolMaterial {
 
     public static final ToolMaterial NETHERITE = new ToolMaterial() {
         @Override public int getDurability() { return TheTruePaxelsConfig.netheriteDurability; }
-        @Override public float getMiningSpeedMultiplier() { return 8.0F; }
+        @Override public float getMiningSpeedMultiplier() { return 9.0F; }
         @Override public float getAttackDamage() { return 4.0F; }
         @Override public int getEnchantability() { return 16; }
         @Override public Ingredient getRepairIngredient() { return Ingredient.ofItems(Items.NETHERITE_INGOT); }
