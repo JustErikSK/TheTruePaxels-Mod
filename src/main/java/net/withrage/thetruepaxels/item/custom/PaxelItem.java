@@ -7,6 +7,8 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.EnchantmentCategory;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
@@ -115,5 +117,16 @@ public class PaxelItem extends Item {
                                 : InteractionHand.OFF_HAND
                 )
         );
+    }
+
+    @Override
+    public int getEnchantmentValue() {
+        return material.getEnchantmentValue();
+    }
+
+    @Override
+    public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
+        return enchantment.category == EnchantmentCategory.DIGGER
+                || super.canApplyAtEnchantingTable(stack, enchantment);
     }
 }
