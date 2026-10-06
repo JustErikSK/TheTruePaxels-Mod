@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:netherite_ingot",
+  "base": "thetruepaxels:diamond_paxel",
+  "result": {
+    "id": "thetruepaxels:netherite_paxel"
+  },
+  "template": "minecraft:netherite_upgrade_smithing_template"
+}

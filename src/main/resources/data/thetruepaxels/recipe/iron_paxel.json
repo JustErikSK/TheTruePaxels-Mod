@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "BCD",
+    " A ",
+    " A "
+  ],
+  "key": {
+    "A": "minecraft:stick",
+    "B": "minecraft:iron_axe",
+    "C": "minecraft:iron_shovel",
+    "D": "minecraft:iron_pickaxe"
+  },
+  "result": {
+    "id": "thetruepaxels:iron_paxel",
+    "count": 1
+  }
+}

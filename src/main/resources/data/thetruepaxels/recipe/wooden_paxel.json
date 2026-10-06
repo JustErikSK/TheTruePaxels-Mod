@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "BCD",
+    " A ",
+    " A "
+  ],
+  "key": {
+    "A": "minecraft:stick",
+    "B": "minecraft:wooden_axe",
+    "C": "minecraft:wooden_shovel",
+    "D": "minecraft:wooden_pickaxe"
+  },
+  "result": {
+    "id": "thetruepaxels:wooden_paxel",
+    "count": 1
+  }
+}
