@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "thetruepaxels:item/golden_paxel_gui"
+  }
+}
